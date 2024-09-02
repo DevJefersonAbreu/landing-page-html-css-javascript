@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Viva Música</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav__logo">
+                <span id="logo1">Viva <span id="logo2"> Música</span></span>
+            </div>
+            <ul class="nav__socials">
+                <li>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
+                </li>
+            </ul>
+            <div class="nav__links">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#professores" class="nav-link">Professores</a></li>
+                    <li class="nav-item"><a href="#fqa" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+            <button onclick="animarMenu()" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+        </nav>
+        <div>
+            <ul class="menu-mobile" id="menu-mobile">
+                <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#professores" class="nav-link">Professores</a></li>
+                <li class="nav-item"><a href="#fqa" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                <div class="mobile-socials">
+                    <li>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="header__container" id="iníiio">
+            <div class="header__content">
+                <h1>Aulas <span>De Música!</span></h1>
+                <p>
+                    Aprender um instrumento ou cantar é uma jornada de crescimento e bem-estar.
+                    Para crianças, melhora o desenvolvimento e a criatividade; para adultos, alivia o estresse e melhora a memória.
+                    Transforme sua vida com os benefícios da música e descubra uma nova paixão.
+                </p>
+                <div class="header__image-mobile">
+                    <img src="./img/istockphoto-1496113750-170667a.webp" alt="header" />
+                </div>
+                <div class="btn">
+                    <button><a href="https://web.whatsapp.com/">Quero Aprender</a></button>
+                </div>
+            </div>
+            <div class="header__image">
+                <img src="./img/istockphoto-1496113750-170667a.webp" alt="header" />
+            </div>
+            <div class="whatsapp">
+                <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </section>
+
+        <section class="depoimentos" id="depoimentos">
+            <h2>Veja alguns depoimentos</h2>
+            <div class="slider-container">
+                <div class="controls-slide">
+                    <button class="prev" aria-label="Previous slide">&lt;</button>
+                    <button class="next" aria-label="Next slide">&gt;</button>
+                </div>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide active">
+                            <img src="./img/WhatsApp Image 2020-04-19 at 22.48.02 (1).webp" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="./img/WhatsApp Image 2020-04-19 at 22.48.02 (1).webp" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="./img/WhatsApp Image 2020-04-19 at 22.48.02 (1).webp" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="indicators">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+
+        <section class="projetos" id="projetos">
+            <h2>Projetos</h2>
+            <div class="flex">
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/istockphoto-888275014-170667a.webp" alt="Teclado">
+                    <h3>Teclado</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais.
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/MajesticPiano.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/woman-3702845_640.jpg" alt="Violino">
+                    <h3>Violino</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais.
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/melody-of-nature-main-6672.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/music-4577592_640.jpg" alt="Canto">
+                    <h3>Canto</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais.
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/melody-of-nature-main-6672.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/music-1379807_640.jpg" alt="Violão">
+                    <h3>Violão</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais. 
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/ANDANTE_-_CARCASSI_-_Guilherme_Giordano_(violão)_-_coelho.de.moraes.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/music-3188856_640.jpg" alt="Flauta Transversal">
+                    <h3>Flauta Transversal</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais.
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/flute-21st-july-137903.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/istockphoto-91511927-170667a.webp" alt="Flauta Doce">
+                    <h3>Flauta Doce</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais. 
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/pan-flute-greensleeves-144616.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/photo-1495584573439-311b2edeec75.avif" alt="Ukulele">
+                    <h3>Ukulele</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais.
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/happy-kids-upbeat-corporate-209130.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="./img/premium_photo-1664279047236-da70da9bc736.avif" alt="Musicalização">
+                    <h3>Musicalização</h3>
+                    <div class="description">
+                        <span>
+                            Explore o som deste instrumento: clique para ver e ouvir mais.
+                        </span>
+                        <div class="button-container">
+                            <button class="video-button" onclick="openVideo()">
+                                <i class="fa-solid fa-play"></i> Vídeo
+                            </button>
+                            <button class="audio-button" onclick="toggleAudio(this)">
+                                <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i> Áudio
+                            </button>
+                        </div>
+                    
+                        <!-- Elemento de áudio oculto -->
+                        <audio id="audio-player">
+                            <source src="./audio-video/kids-music-118820.mp3" type="audio/mpeg">
+                            Seu navegador não suporta áudio HTML5.
+                        </audio>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="professores" id="professores">
+            <h3>Professores</h3>
+            <div class="flex1">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card1">
+                                <img src="./img/client-1.jpg" alt="Professor 1">
+                                <h4>Professor 1</h4>
+                                <p>Explore o som deste instrumento: clique para ver e ouvir mais.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card1">
+                                <img src="./img/client-2.jpg" alt="Professor 2">
+                                <h4>Professor 2</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card1">
+                                <img src="./img/client-3.png" alt="Professor 3">
+                                <h4>Professor 3</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="perguntas-frequentes" id="fqa">
+            <div class="card2">
+                <h4 class="card-title">
+                    Perguntas Frequentes (FAQ)
+                </h4>
+    
+                <ul class="list">
+    
+                    <li class="list-item">
+                        <button class="list-item-button" onclick="openCloseDiv(this);">
+                            1º Pergunta
+                            <svg class="list-item-button-icon icon-closed">
+                                <path
+                                    d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="list-item-content list-item-closed">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <button class="list-item-button" 
+                        onclick="openCloseDiv(this);">
+                            2º Pergunta
+                            <svg class="list-item-button-icon icon-closed">
+                                <path
+                                    d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="list-item-content list-item-closed">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <button class="list-item-button" onclick="openCloseDiv(this);">
+                            3º Pergunta
+                            <svg class="list-item-button-icon icon-closed">
+                                <path
+                                    d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="list-item-content list-item-closed">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </li>
+    
+                </ul>
+    
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" id="contato">
+        <div class="contatos">
+        <div class="nav__logo" id="nav__logo">
+            <span id="logo1">Logo </span><span id="logo2"> Marca</span>
+        </div>
+        <div class="sociais2">
+            <span >Fale Conosco:</span>
+            <ul class="nav__socials2">
+                <li>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="direitos">
+        <h5>Copyright 2024 © Jeferson Abreu – Todos os direitos reservado</h5>
+    </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
